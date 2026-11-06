@@ -1,5 +1,5 @@
 (async()=>{
- const endpoint='https://loki-compress-stats.lokimao0426.workers.dev',status=document.getElementById('stats-status');
+ const endpoint='https://loki-image-compressor.pages.dev/api/visits',status=document.getElementById('stats-status');
  try{
   let visitor;try{visitor=localStorage.getItem('loki-compress-visitor');if(!visitor){visitor=crypto.randomUUID();localStorage.setItem('loki-compress-visitor',visitor)}}catch{}
   const production=['pixel-pocket-loki.loki-6b76.chatgpt.site','compress.hiloki.cn','loki-image-compressor.pages.dev'].includes(location.hostname);

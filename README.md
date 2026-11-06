@@ -1,6 +1,6 @@
 # 轻一点 · Loki 图片压缩
 
-[在线使用](https://loki-image-compressor.pages.dev) · [Loki](https://hiloki.cn)
+[在线使用](https://compress.hiloki.cn) · [备用地址](https://loki-image-compressor.pages.dev) · [Loki](https://hiloki.cn)
 
 ![Loki 小熊猫](dist/static/loki-ip.png)
 
@@ -28,3 +28,5 @@
 自行部署：创建自己的 D1 数据库，将 stats-service/wrangler.jsonc 的 database_id 改为自己的，执行 schema.sql，再部署 Worker。将 worker.mjs 的 ORIGINS 和 dist/static/stats.js 的 endpoint/production 域名替换为自己的。不要向本项目的线上统计端点发送自己的站点访问。
 
 数据库使用 D1 参数化查询与事务：[官方文档](https://developers.cloudflare.com/d1/worker-api/d1-database/)。
+
+Cloudflare Pages 使用根目录 wrangler.jsonc 中的 STATS 服务绑定，functions/api/visits 代理统计服务，浏览器不依赖 workers.dev 可达性。自行部署需替换 Worker 服务名。
